@@ -1,0 +1,41 @@
+body {
+	background-color: #666666;
+	color: #ffddcc;
+}
+
+#header {
+	text-align: center;
+}
+
+a:link {
+	color: #000099;
+}
+a:hover {
+	color: #3030cc;
+}
+a:visited {
+	color: #440000;
+}
+
+.menu {
+	display: inline-block;
+	padding: 10px 20px;
+	font-family: Courier;
+	font-size: 1.5em;
+}
+#profileImage {
+	text-align: center;
+}
+
+p {
+	text-align: center;
+	font-family: Times;
+}
+
+
+
+
+
+
+
+
