@@ -17,6 +17,7 @@ a:visited {
 	color: #440000;
 }
 
+
 .menu {
 	display: inline-block;
 	padding: 10px 20px;
@@ -32,9 +33,13 @@ p {
 	font-family: Times;
 }
 
+ul.menu li {
+	display: inline;
+}
 
-
-
+footer {
+	text-align: center;
+}
 
 
 
