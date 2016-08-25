@@ -1,28 +1,8 @@
 body {
-	background-color: #666666;
-	color: #ccc;	
-	cursor: crosshair;
-	margin: auto;
-	font-family: arial;
-	font-size: 120%;
-}
-
-a:link {
-	color: #000044;
-}
-a:hover {
-	color: #3030cc;
-}
-a:visited {
-	color: #440000;
-}
-
-header {
 	text-align: center;
 }
 
 nav {
-	display: inline-block;
 	font-family: Courier;
 	font-size: 1.5em;
 }
@@ -31,54 +11,19 @@ nav li {
 	padding: 0 50px;
 }
 
-#profileImage {
-	text-align: center;
-}
-
-p {
-}
-
 footer {
-	text-align: center;
-	font-family: Courier;
-	font-size: 1.5em;
-	padding-bottom: 20px;
+	margin-top: 30px;
 }
 footer li {
 	display: inline;
-	text-decoration: none;
-	padding: 0 10px;
-}
-
-@keyframes logo {
-    from {
-    	background-color: #acacac;
-		background-image: url("jasonmize.png");
-    }
-    to {
-    	background-color: #666666;
-		background-image: url("jasonmize_dark.png");
-    }
+	padding: 0 20px;
 }
 
 .headerImg {
-	border-radius: 25px;
-	height: 130px;
-	width: 700px;
-	margin: auto;
-    background-color: #666666;
-	background-image: url("jasonmize_dark.png");
-    animation-name: logo;
-    animation-duration: 2s;
-    animation-timing-function: ease-in;
-
+	background-image: url("jasonmize.png");
+	height: 120px;
+	max-width: 700px;
+	margin:auto;
 }
 
-.contents {
-	margin: auto;
-	width: 600px;
-}
 
-.post {
-	color: #cccccc;
-}

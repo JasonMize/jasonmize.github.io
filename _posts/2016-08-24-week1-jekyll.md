@@ -3,7 +3,6 @@ layout: page
 title: Week 1 - Jekyll
 ---
 
-
 # Week 1: Jekyll
 
 It's early in our [bootcamp](https://www.awesomeincu.com/) and we've been learning HTML & CSS, the bones of web development. HTML & CSS are simple languages that the developer uses to layout a website's design and information.  Hopefully the developer designs the site in a way that is:
@@ -43,6 +42,3 @@ I spent an unfortunate hour or two trying various ways to add CSS styles to my M
 I've been assured that tomorrow we will be learning Bootstrap and all my problems will be solved.  
 
 Till then, I'll simply carry on.  And hopefully sleep.  
-
-
-
