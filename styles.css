@@ -1,11 +1,14 @@
 body {
 	background-color: #666666;
-	color: #ffddcc;
+	color: #ccc;	
 	cursor: crosshair;
+	margin: auto;
+	font-family: arial;
+	font-size: 120%;
 }
 
 a:link {
-	color: #000099;
+	color: #000044;
 }
 a:hover {
 	color: #3030cc;
@@ -33,8 +36,6 @@ nav li {
 }
 
 p {
-	text-align: center;
-	font-family: Times;
 }
 
 footer {
@@ -46,7 +47,7 @@ footer {
 footer li {
 	display: inline;
 	text-decoration: none;
-	padding: 0 20px;
+	padding: 0 10px;
 }
 
 @keyframes logo {
@@ -73,4 +74,11 @@ footer li {
 
 }
 
+.contents {
+	margin: auto;
+	width: 600px;
+}
 
+.post {
+	color: #cccccc;
+}

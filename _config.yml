@@ -1,7 +1,8 @@
 title: Jason Mize
 
-about: "/about.html"
 home: "/index.html"
+about: "/about.html"
+blog: "/blog.html"
 
 github: "http://github.com/JasonMize"
 facebook: "http://facebook.com/jason.mize"
