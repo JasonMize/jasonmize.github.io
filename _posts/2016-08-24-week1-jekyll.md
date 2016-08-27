@@ -1,15 +1,13 @@
 ---
-layout: page
+layout: post
 title: Week 1 - Jekyll
 ---
 
-# Week 1: Jekyll
-
 It's early in our [bootcamp](https://www.awesomeincu.com/) and we've been learning HTML & CSS, the bones of web development. HTML & CSS are simple languages that the developer uses to layout a website's design and information.  Hopefully the developer designs the site in a way that is:
 
-* clear to understand
-* easy to navigate
-* a pleasure to behold
+- clear to understand
+- easy to navigate
+- a pleasure to behold
 
 Even working on a very simple website it becomes obvious that with every little change, you frequently end up performing repetitive, reduntant actions.  If you mispell a word in the menu then you have to go to every page that has a menu (all of them) and fix the spelling. This happens a LOT. (No jks abut my speling, pleese.) If you have 5 pages, this is a minor annoyance. If you have 20 then life just isn't worth living. 
 
@@ -28,7 +26,7 @@ As someone who loves efficiency, I find this a beautiful thing.
 
 It feels very modular. I also love Legos. 
 
-![Legos](/legos.jpg)
+![Legos]({{ site.baseurl }}/legos.jpg)
 
 
 ## Is There No Downside?
@@ -42,3 +40,4 @@ I spent an unfortunate hour or two trying various ways to add CSS styles to my M
 I've been assured that tomorrow we will be learning Bootstrap and all my problems will be solved.  
 
 Till then, I'll simply carry on.  And hopefully sleep.  
+

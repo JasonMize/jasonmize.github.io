@@ -17,13 +17,17 @@ footer {
 footer li {
 	display: inline;
 	padding: 0 20px;
+	color: #337ab7;
+	font-size: 1.5em;
 }
 
 .headerImg {
-	background-image: url("jasonmize.png");
 	height: 120px;
 	max-width: 700px;
 	margin:auto;
 }
 
+.gotcha { /* to hide form field that checks for spam */
+	visibility: hidden;
+}
 

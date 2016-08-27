@@ -1,7 +1,12 @@
 title: Jason Mize
+baseurl: /jasonmize
+
+about: about.html
+blog: blog.html
+contact: contact.html
 
 github: "http://github.com/JasonMize"
 facebook: "http://facebook.com/jason.mize"
 twitter: "http://twitter.com/Jason_Mize"
 linkedin: "http://linkedin.com/in/jasonemize"
-email: "mailto:jasonemize@gmail.com"
+email: "jasonemize@gmail.com"
