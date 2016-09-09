@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Week 1 - Jekyll
+title: Jekyll
 ---
 
 It's early in our [bootcamp](https://www.awesomeincu.com/) and we've been learning HTML & CSS, the bones of web development. HTML & CSS are simple languages that the developer uses to layout a website's design and information.  Hopefully the developer designs the site in a way that is:
