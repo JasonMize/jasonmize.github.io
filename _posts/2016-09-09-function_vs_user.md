@@ -23,7 +23,12 @@ Imagine my glee when our instructors gave us an assignment to build a text adven
 
 For those of you who didn't grow up playing [Hitchiker's Guide To The Galaxy](http://textadventures.co.uk/games/view/3cbedqimquselmanehhzxg/the-hitchhikers-guide-to-the-galaxy "Hitchiker's Guide To The Galaxy"), a text adventure is a game with no graphic elements.  All you have is a page with text and a command line that you can give orders from.  "Look", "move south", "talk", "help", etc.  Or even just "1", "2", "3" to choose options from a menu.  Text adventures are typically laid out much like the old [Choose Your Own Adventure](https://en.wikipedia.org/wiki/Choose_Your_Own_Adventure "Choose Your Own Adventure") books with branching story lines driven by user choices. 
 
-Our assignment had a very simple requirement set.  Work.  Be able to progress through a few rooms.  Have some from of interaction with someone.  Have a winning scenario and a losing scenario. 
+Our assignment had a very simple requirement set.
+
+1. Work. 
+2. Progress through a few rooms. 
+3. Have some form of interaction with someone or something in the game. 
+4. Have a winning scenario and a losing scenario. 
 
 This is when a demon from the outer ring of the 7th level of hell (home of violent murderers and game designers) possessed my body and took control of my mind.
 
