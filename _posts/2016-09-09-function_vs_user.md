@@ -50,7 +50,7 @@ My mind balks though.  30 seconds of confusion and the user walks!  Usability IS
 
 But what good is it if the program isn't complete?
 
-Clearly, I'm going to have to find a balance between the two.  I think what I'm looking for is a good structure for my basic features that allows me to expand usability functions later.  Without having to rewrite my code from scratch to make them work.  An initial design that allows growth. 
+Clearly, I'm going to have to find a balance between the two.  What I'm looking for is a good structure for my basic features that allows me to expand usability functions later - a design that allows growth without having to rewrite my code from scratch. 
 
 I don't know enough yet to know what that looks like.  But I'm working on it. 
 
