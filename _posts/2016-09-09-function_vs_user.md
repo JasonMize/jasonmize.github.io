@@ -35,7 +35,7 @@ This is when a demon from the outer ring of the 7th level of hell (home of viole
 
 ## Sure, It's Pretty...
 
-I spent most of the first week wrestling with layout and flow.  Sub menus.  Action confirmations.  Screen layout. 
+I spent most of the first week wrestling with layout and flow, sub menus, action confirmations, and screen layouts. 
 
 At the end of this, what I had was a very pretty, very usable program that would let you choose a player name and describe the first room you find yourself in. 
 
