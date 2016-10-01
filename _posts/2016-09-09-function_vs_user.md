@@ -14,7 +14,7 @@ One of my biggest takeaways from my time on TFTSU is how big a distance there is
 
 Okay, now how about my mom?  Or a 10 year old?  Or just my non-tech friends? 
 
-Over and over I had it hit home that simply having functionality isn't nearly enough.  The difference in a happy user and a user who never comes back is about 30 seconds of confusion. 
+Over and over, it hit home that functionality isn't nearly enough.  The difference between a happy user and a user who never comes back is about 30 seconds of confusion. 
 
 
 ## Assignment: Build A Game
