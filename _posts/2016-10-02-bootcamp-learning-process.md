@@ -34,7 +34,7 @@ In your typical college class, learning happens in the opposite direction. They 
 
 The bootcamp method allows you to absorb a lot of information in a short time. The tradeoff being that every second of that time will be spent in a state of frustrated confusion. 
 
-Learning via the bootcamp method goes through the following stages:
+### The Bootcamp Learning Stages:
 
 1. Copy code - the teacher writes a line and you copy it. It does something but you have no idea why.
 2. Pattern recognition - the teacher writes a line and you copy it. You anticipate what it will do because you have seen it do it before.
