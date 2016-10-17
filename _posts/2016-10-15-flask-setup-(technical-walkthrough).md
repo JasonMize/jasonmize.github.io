@@ -77,7 +77,7 @@ $ `touch app/static/styles.css`
 $ `app/templates/base.html`
 
 **app/templates/base.html:**
-~~~~~
+{% highlight html %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,8 +94,7 @@ $ `app/templates/base.html`
 </body>
 <footer></footer>
 </html>
-~~~~~
-
+{% endhighlight %}
 
 $ `touch app/templates/index.html`
 
