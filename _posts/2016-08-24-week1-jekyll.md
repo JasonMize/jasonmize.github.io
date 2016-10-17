@@ -26,8 +26,6 @@ As someone who loves efficiency, I find this a beautiful thing.
 
 It feels very modular. I also love Legos. 
 
-![Legos]({{ site.baseurl }}/legos.jpg)
-
 
 ## Is There No Downside?
 
