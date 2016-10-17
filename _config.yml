@@ -1,6 +1,9 @@
 title: Jason Mize
 baseurl: 
 
+markdown: redcarpet
+
+
 about: about.html
 blog: blog.html
 contact: contact.html
