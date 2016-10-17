@@ -20,9 +20,9 @@ Any line preceeded by a "$" is intended as a terminal command.
 Lines to insert into files will be shown as a code snippet. For example:
 
 **filename:**
-~~~~
-line you should copy into file
-~~~~
+<code>
+line you should copy into file 
+</code>
 
 Anytime you see "project_name", change it to the name of your project. 
 
