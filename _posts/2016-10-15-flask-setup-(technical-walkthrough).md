@@ -77,8 +77,7 @@ $ `touch app/static/styles.css`
 $ `app/templates/base.html`
 
 **app/templates/base.html:**
-<!-- <pre><code> -->
-~~~~
+~~~~~
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,13 +95,12 @@ $ `app/templates/base.html`
 <footer></footer>
 </html>
 ~~~~~
-<!-- </code></pre> -->
+
 
 $ `touch app/templates/index.html`
 
 **app/templates/index.html:**
-<!-- <pre><code> -->
-~~~~
+~~~~~
 {% raw %}
 {% extends "base.html" %}
 
@@ -110,7 +108,6 @@ $ `touch app/templates/index.html`
     <h1>Hello World</h1>
 {% endblock content %} {% endraw %}
 ~~~~~
-<!-- </code></pre> -->
 
 
 ## Routing URL's
