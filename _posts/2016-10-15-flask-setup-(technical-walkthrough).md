@@ -86,27 +86,27 @@ $ `app/templates/base.html`
 </head>
 <body>
     <header>something</header>
-    {% raw %}
+
     {% block content %}
         
     {% endblock content %}
-    {% endraw %}
+
 </body>
 <footer></footer>
 </html>
 {% endhighlight %}
 
+
 $ `touch app/templates/index.html`
 
 **app/templates/index.html:**
-~~~~~
-{% raw %}
+{% highlight html %}
 {% extends "base.html" %}
 
 {% block content %}
     <h1>Hello World</h1>
-{% endblock content %} {% endraw %}
-~~~~~
+{% endblock content %} 
+{% endhighlight %}
 
 
 ## Routing URL's
