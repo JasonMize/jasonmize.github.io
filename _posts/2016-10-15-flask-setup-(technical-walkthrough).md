@@ -20,9 +20,9 @@ Any line preceeded by a "$" is intended as a terminal command.
 Lines to insert into files will be shown as a code snippet. For example:
 
 **filename:**
-<code>
+<pre><code>
 line you should copy into file 
-</code>
+</code></pre>
 
 Anytime you see "project_name", change it to the name of your project. 
 
@@ -38,10 +38,10 @@ $ `pip freeze > requirements.txt`
 $ `touch .gitignore`
 
 **.gitignore:**
-~~~~
+<pre><code>
 __pycache__
 *.pyc
-~~~~
+</code></pre>
 
 $ `mkdir app`
 
@@ -54,21 +54,21 @@ $ `mkdir app/templates/includes`
 $ `touch run.py`
 
 **run.py:**
-~~~~
+<pre><code>
 import sys`
 from app import app`
 app.run(debug=True)`
-~~~~
+</code></pre>
 
 $ `touch __init__.py`
 
 **\__init__.py:**
-~~~~
+<pre><code>
 from flask import Flask
 app = Flask(__name__)
 from app import views
 from app import filters
-~~~~
+</code></pre>
 
 ## CSS and HTML Templates
 
@@ -77,6 +77,7 @@ $ `touch app/static/styles.css`
 $ `app/templates/base.html`
 
 **app/templates/base.html:**
+<!-- <pre><code> -->
 ~~~~
 <!DOCTYPE html>
 <html lang="en">
@@ -85,7 +86,7 @@ $ `app/templates/base.html`
     <title>Document</title>
 </head>
 <body>
-    <header></header>
+    <header>something</header>
     {% raw %}
     {% block content %}
         
@@ -94,18 +95,22 @@ $ `app/templates/base.html`
 </body>
 <footer></footer>
 </html>
-~~~~
+~~~~~
+<!-- </code></pre> -->
 
 $ `touch app/templates/index.html`
 
 **app/templates/index.html:**
-~~~~ {% raw %}
+<!-- <pre><code> -->
+~~~~
+{% raw %}
 {% extends "base.html" %}
 
 {% block content %}
     <h1>Hello World</h1>
 {% endblock content %} {% endraw %}
-~~~~
+~~~~~
+<!-- </code></pre> -->
 
 
 ## Routing URL's
@@ -113,7 +118,7 @@ $ `touch app/templates/index.html`
 $ `touch app/views.py`
 
 **app/views.py**
-~~~~
+<pre><code>
 import os
 
 from flask import render_template
@@ -124,14 +129,14 @@ from app import app
 @app.route("/index")
 def index():
     return render_template("index.html")
-~~~~
+</code></pre>
 
 $ `touch app/filters.py`
 
 **app/filters.py**
-~~~~
+<pre><code>
 from app import app
-~~~~
+</code></pre>
 
 
 ## Forms
@@ -143,7 +148,7 @@ $ `pip freeze > requirements.txt`
 $ `touch app/forms.py`
 
 **app/forms.py**
-~~~~
+<pre><code>
 from wtforms import Form, StringField, RadioField, validators, ValidationError
 
 class FormName (Form):
@@ -155,7 +160,7 @@ class FormName (Form):
             ("choice2", "choice2",),
         ]
     )
-~~~~
+</code></pre>
 
     
 
