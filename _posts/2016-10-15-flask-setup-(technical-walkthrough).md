@@ -20,9 +20,9 @@ Any line preceeded by a "$" is intended as a terminal command.
 Lines to insert into files will be shown as a code snippet. For example:
 
 **filename:**
-<pre><code>
+{% highlight html %}
 line you should copy into file 
-</code></pre>
+{% endhighlight%}
 
 Anytime you see "project_name", change it to the name of your project. 
 
@@ -38,10 +38,10 @@ $ `pip freeze > requirements.txt`
 $ `touch .gitignore`
 
 **.gitignore:**
-<pre><code>
+{% highlight python %}
 __pycache__
 *.pyc
-</code></pre>
+{% endhighlight %}
 
 $ `mkdir app`
 
@@ -54,21 +54,21 @@ $ `mkdir app/templates/includes`
 $ `touch run.py`
 
 **run.py:**
-<pre><code>
+{% highlight python %}
 import sys`
 from app import app`
 app.run(debug=True)`
-</code></pre>
+{% endhighlight %}
 
 $ `touch __init__.py`
 
 **\__init__.py:**
-<pre><code>
+{% highlight python %}
 from flask import Flask
 app = Flask(__name__)
 from app import views
 from app import filters
-</code></pre>
+{% endhighlight %}
 
 ## CSS and HTML Templates
 
@@ -113,7 +113,7 @@ $ `touch app/templates/index.html`
 $ `touch app/views.py`
 
 **app/views.py**
-<pre><code>
+{% highlight python %}
 import os
 
 from flask import render_template
@@ -124,14 +124,14 @@ from app import app
 @app.route("/index")
 def index():
     return render_template("index.html")
-</code></pre>
+{% endhighlight %}
 
 $ `touch app/filters.py`
 
 **app/filters.py**
-<pre><code>
+{% highlight python %}
 from app import app
-</code></pre>
+{% endhighlight %}
 
 
 ## Forms
@@ -143,7 +143,7 @@ $ `pip freeze > requirements.txt`
 $ `touch app/forms.py`
 
 **app/forms.py**
-<pre><code>
+{% highlight python %}
 from wtforms import Form, StringField, RadioField, validators, ValidationError
 
 class FormName (Form):
@@ -155,8 +155,7 @@ class FormName (Form):
             ("choice2", "choice2",),
         ]
     )
-</code></pre>
-
+{% endhighlight %}
     
 
 
