@@ -1,7 +1,7 @@
 title: Jason Mize
 baseurl: 
 
-markdown: redcarpet
+markdown: kramdown
 
 
 about: about.html
