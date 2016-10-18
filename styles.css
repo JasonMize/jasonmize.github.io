@@ -34,3 +34,58 @@ footer li {
 .posts {
 	text-align: left;
 }
+
+.portfolio-container {
+	min-height: 200px;
+}
+.portfolio-box {
+	background-color: #ccc;
+	margin: 0px 10px;
+	border: 1px solid #999;
+	box-shadow: 2px 2px 5px #000;
+}
+.portfolio-plonker-title a{
+	color: #f1f8fb;
+	text-shadow: 3px 2px 0px #2548af;
+}
+.portfolio-image img{
+	border: 1px solid #000;
+}
+.portfolio-box-controls {
+	padding: 10px 0;
+	margin: 10px 0;
+}
+.portfolio-box-controls span{
+	width: 50px;
+	padding: 10px;
+	margin: 10px;
+	background-color: #fff;
+	box-shadow: 2px 2px 5px #000;
+}
+
+
+
+
+/*@keyframes logo {
+    from {
+    	background-color: #acacac;
+		background-image: url("jasonmize.png");
+    }
+    to {
+    	background-color: #666666;
+		background-image: url("jasonmize_dark.png");
+    }
+}
+
+.headerImg {
+	border-radius: 25px;
+	height: 130px;
+	width: 700px;
+	margin: auto;
+    background-color: #666666;
+	background-image: url("jasonmize_dark.png");
+    animation-name: logo;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+
+}*/

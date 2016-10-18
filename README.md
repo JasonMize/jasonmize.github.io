@@ -1,6 +1,4 @@
 # jasonmize.github.io
-bootcamp challenge 1
-
 
 
 GitHub: www.github.com/JasonMize
