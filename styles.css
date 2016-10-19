@@ -52,45 +52,73 @@ footer li {
 }
 .portfolio-box {
 	background-color: #ccc;
-	margin: 0px 10px;
+	margin: 10px 10px;
 	border: 1px solid #999;
-	box-shadow: 2px 2px 5px #000;
+	box-shadow: 1px 1px 2px #333;
 	animation-name: portfolio-box;
 	animation-duration: 1.5s;
 	animation-timing-function: ease-in;
 }
 .portfolio-title a{
 	color: #f1f8fb;
-	text-shadow: 2px 1px 2px #333;
+	text-shadow: 1px 1px 2px #333;
 }
 .portfolio-blurb {
-	margin: 0px 0px 20px 0px;
+	color: #555;
+	margin: 0px 0px 10px 0px;
+}
+.portfolio-hr {
+	color: #f1f8fb;
+	width: 70%;
+}
+.portfolio-tools {
+	margin-bottom: 15px;
 }
 .portfolio-image {
 	height: 200px;
 	border: 1px solid #000;
 	width: 200px;
 	margin: auto;
+	margin-bottom: 25px;
+	box-shadow: 1px 1px 2px #333;
 }
 .portfolio-image img{
-	width: 200px;
+	width: 198px;
+}
+.portfolio-image-plonker {
+	background: linear-gradient(180deg, #f9fbff, #b3cef9 55%, #009); 
+}
+.portfolio-image-plonker i {
+	padding-top: 40px;
+	margin: auto;
+	font-size: 120px;
 }
 .portfolio-image-whodo {
-	background: linear-gradient(180deg, #f9fbff, #b3cef9 95%, #000); 
+	background: linear-gradient(180deg, #f9fbff, #b3cef9 85%, #000); 
 }
 .portfolio-image-whodo img {
-	padding-top: 30px;
+	padding-top: 35px;
+}
+.portfolio-image-groceryrun {
+	background: linear-gradient(180deg, #B43C3C, #562E2E);
+	background-color: #562E2E
+}
+.portfolio-image-groceryrun i {
+	padding-top: 20px;
+	font-size: 150px;
+	color: #d9d9d9;
+	text-shadow: 1px 1px 2px #333;
 }
 .portfolio-box-controls {
 	padding: 10px 0;
-	margin: 10px 0;
+	margin: 10px 0 20px 0;
 }
 .portfolio-box-controls span{
 	width: 50px;
 	padding: 10px;
 	margin: 10px;
 	background-color: #fff;
-	box-shadow: 2px 2px 5px #000;
+	box-shadow: 1px 1px 2px #333;
 }
 
 .carousel-content {
