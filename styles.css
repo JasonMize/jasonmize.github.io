@@ -59,12 +59,27 @@ footer li {
 	animation-duration: 1.5s;
 	animation-timing-function: ease-in;
 }
-.portfolio-plonker-title a{
+.portfolio-title a{
 	color: #f1f8fb;
-	text-shadow: 2px 1px 2px #2548af;
+	text-shadow: 2px 1px 2px #333;
+}
+.portfolio-blurb {
+	margin: 0px 0px 20px 0px;
+}
+.portfolio-image {
+	height: 200px;
+	border: 1px solid #000;
+	width: 200px;
+	margin: auto;
 }
 .portfolio-image img{
-	border: 1px solid #000;
+	width: 200px;
+}
+.portfolio-image-whodo {
+	background: linear-gradient(180deg, #f9fbff, #b3cef9 95%, #000); 
+}
+.portfolio-image-whodo img {
+	padding-top: 30px;
 }
 .portfolio-box-controls {
 	padding: 10px 0;
@@ -82,32 +97,12 @@ footer li {
 	border: 2px solid #333;
 }
 .carousel-arrow {
-	padding-top: 40vh;
+	padding-top: 20vh;
 	font-size: 4em;
 }
 
 
 
-/*@keyframes logo {
-    from {
-    	background-color: #acacac;
-	background-image: url("jasonmize.png");
-    }
-    to {
-    	background-color: #666666;
-	background-image: url("jasonmize_dark.png");
-    }
-}
 
-.headerImg {
-	border-radius: 25px;
-	height: 130px;
-	width: 700px;
-	margin: auto;
-	background-color: #666666;
-	background-image: url("jasonmize_dark.png");
-    animation-name: logo;
-    animation-duration: 2s;
-    animation-timing-function: ease-in;
 
-}*/
+
