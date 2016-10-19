@@ -1,3 +1,15 @@
+/* animation keyframes */
+@keyframes portfolio-box {
+    from {
+	opacity: 0;
+    }
+    to {
+	opacity: 100;
+    }
+}
+
+
+
 body {
 	text-align: center;
 }
@@ -43,10 +55,13 @@ footer li {
 	margin: 0px 10px;
 	border: 1px solid #999;
 	box-shadow: 2px 2px 5px #000;
+	animation-name: portfolio-box;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-in;
 }
 .portfolio-plonker-title a{
 	color: #f1f8fb;
-	text-shadow: 3px 2px 0px #2548af;
+	text-shadow: 2px 1px 2px #2548af;
 }
 .portfolio-image img{
 	border: 1px solid #000;
@@ -63,17 +78,24 @@ footer li {
 	box-shadow: 2px 2px 5px #000;
 }
 
+.carousel-content {
+	border: 2px solid #333;
+}
+.carousel-arrow {
+	padding-top: 40vh;
+	font-size: 4em;
+}
 
 
 
 /*@keyframes logo {
     from {
     	background-color: #acacac;
-		background-image: url("jasonmize.png");
+	background-image: url("jasonmize.png");
     }
     to {
     	background-color: #666666;
-		background-image: url("jasonmize_dark.png");
+	background-image: url("jasonmize_dark.png");
     }
 }
 
@@ -82,7 +104,7 @@ footer li {
 	height: 130px;
 	width: 700px;
 	margin: auto;
-    background-color: #666666;
+	background-color: #666666;
 	background-image: url("jasonmize_dark.png");
     animation-name: logo;
     animation-duration: 2s;
