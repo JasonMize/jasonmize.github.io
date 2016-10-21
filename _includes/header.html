@@ -1,36 +1,40 @@
 <!Doctype html>
 <html>
 <head>
-	<title>{{ site.title }} | {{ page.title }}</title>
+    <title>{{ site.title }} | {{ page.title }}</title>
 
-	<!-- font awesome -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-	<!-- bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- my styles -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
+    
+    <!-- favicon -->
+    <link rel='shortcut icon' href='{{ site.baseurl }}/images/jm-favicon.ico' type='image/x-icon'/ >
 </head>
 <body>
 
 <header class="navbar navbar-default navbar-top">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="headerImg">
-					<img  class="img-responsive" src="{{ site.baseurl }}/images/jasonmize.png">
-				</div>
-				<nav>
-					<ul>
-						<li><a href="{{ site.baseurl }}/">Home</a></li>
-						<li><a href="{{ site.baseurl }}/about">About</a></li>
-						<li><a href="{{ site.baseurl }}/blog">Blog</a></li>
-						<li><a href="{{ site.baseurl }}/portfolio">Portfolio</a></li>
-						<li><a href="{{ site.baseurl }}/contact">Contact</a>
-					</ul>
-				</nav>
-			</div><!-- end col -->
-		</div><!-- end row -->
-	</div><!-- end container -->
-</header>	
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="headerImg">
+                    <img  class="img-responsive" src="{{ site.baseurl }}/images/jasonmize.png">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="{{ site.baseurl }}/">Home</a></li>
+                        <li><a href="{{ site.baseurl }}/about">About</a></li>
+                        <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
+                        <li><a href="{{ site.baseurl }}/portfolio">Portfolio</a></li>
+                        <li><a href="{{ site.baseurl }}/contact">Contact</a>
+                    </ul>
+                </nav>
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</header>   
