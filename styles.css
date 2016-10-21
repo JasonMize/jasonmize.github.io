@@ -1,134 +1,154 @@
 /* animation keyframes */
 @keyframes portfolio-box {
-    from {
-	opacity: 0;
-    }
-    to {
-	opacity: 100;
-    }
+    from { opacity: 0; }
+    to { opacity: 100; }
 }
-
+@keyframes profile-image {
+    from { opacity: 0; }
+    to { opacity: 100; }
+}
+@keyframes about-video {
+    from { opacity: 100; }
+    to { opacity: 0; }    
+}
 
 
 body {
-	text-align: center;
+    text-align: center;
 }
 
 nav {
-	font-family: Courier;
-	font-size: 1.5em;
+    font-family: Courier;
+    font-size: 1.5em;
 }
 nav li {
-	display: inline;
-	padding: 0 50px;
+    display: inline;
+    padding: 0 50px;
 }
 
 footer {
-	margin-top: 30px;
+    margin-top: 30px;
 }
 footer li {
-	display: inline;
-	padding: 0 20px;
-	color: #337ab7;
-	font-size: 1.5em;
+    display: inline;
+    padding: 0 20px;
+    color: #337ab7;
+    font-size: 1.5em;
 }
 
 .headerImg {
-	height: 120px;
-	max-width: 700px;
-	margin:auto;
+    height: 120px;
+    max-width: 700px;
+    margin:auto;
+}
+
+#profileImage {
+    animation-name: profile-image;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+}
+
+.about-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    animation-name: about-video;
+    animation-duration: 1.5s;
+    animation-delay: 0.2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
 }
 
 .gotcha { /* to hide form field that checks for spam */
-	visibility: hidden;
+    visibility: hidden;
 }
 
 .posts {
-	text-align: left;
+    text-align: left;
 }
 
 .portfolio-container {
-	min-height: 200px;
+    min-height: 200px;
 }
 .portfolio-box {
-	background-color: #ccc;
-	margin: 10px 10px;
-	border: 1px solid #999;
-	box-shadow: 1px 1px 2px #333;
-	animation-name: portfolio-box;
-	animation-duration: 1.5s;
-	animation-timing-function: ease-in;
+    background-color: #ccc;
+    margin: 10px 10px;
+    border: 1px solid #999;
+    box-shadow: 1px 1px 2px #333;
+    animation-name: portfolio-box;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
 }
 .portfolio-title a{
-	color: #f1f8fb;
-	text-shadow: 1px 1px 2px #333;
+    color: #f1f8fb;
+    text-shadow: 1px 1px 2px #333;
 }
 .portfolio-blurb {
-	color: #555;
-	margin: 0px 0px 10px 0px;
+    color: #555;
+    margin: 0px 0px 10px 0px;
 }
 .portfolio-hr {
-	color: #f1f8fb;
-	width: 70%;
+    color: #f1f8fb;
+    width: 70%;
 }
 .portfolio-tools {
-	margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 .portfolio-image {
-	height: 200px;
-	border: 1px solid #000;
-	width: 200px;
-	margin: auto;
-	margin-bottom: 25px;
-	box-shadow: 1px 1px 2px #333;
+    height: 200px;
+    border: 1px solid #000;
+    width: 200px;
+    margin: auto;
+    margin-bottom: 25px;
+    box-shadow: 1px 1px 2px #333;
 }
 .portfolio-image img{
-	width: 198px;
+    width: 198px;
 }
 .portfolio-image-plonker {
-	background: linear-gradient(180deg, #f9fbff, #b3cef9 55%, #009); 
+    background: linear-gradient(180deg, #f9fbff, #b3cef9 55%, #009); 
 }
 .portfolio-image-plonker i {
-	padding-top: 40px;
-	margin: auto;
-	font-size: 120px;
+    padding-top: 40px;
+    margin: auto;
+    font-size: 120px;
 }
 .portfolio-image-whodo {
-	background: linear-gradient(180deg, #f9fbff, #b3cef9 85%, #000); 
+    background: linear-gradient(180deg, #f9fbff, #b3cef9 85%, #000); 
 }
 .portfolio-image-whodo img {
-	padding-top: 35px;
+    padding-top: 35px;
 }
 .portfolio-image-groceryrun {
-	background: linear-gradient(180deg, #B43C3C, #562E2E);
-	background-color: #562E2E
+    background: linear-gradient(180deg, #B43C3C, #562E2E);
+    background-color: #562E2E
 }
 .portfolio-image-groceryrun i {
-	padding-top: 20px;
-	font-size: 150px;
-	color: #d9d9d9;
-	text-shadow: 1px 1px 2px #333;
+    padding-top: 20px;
+    font-size: 150px;
+    color: #d9d9d9;
+    text-shadow: 1px 1px 2px #333;
 }
 .portfolio-box-controls {
-	padding: 10px 0;
-	margin: 10px 0 20px 0;
+    padding: 10px 0;
+    margin: 10px 0 20px 0;
 }
 .portfolio-box-controls span{
-	width: 50px;
-	padding: 10px;
-	margin: 10px;
-	background-color: #fff;
-	box-shadow: 1px 1px 2px #333;
+    width: 50px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 1px 1px 2px #333;
 }
 
 .carousel-content {
-	border: 2px solid #333;
+    border: 2px solid #333;
 }
 .carousel-arrow {
-	padding-top: 20vh;
-	font-size: 4em;
+    padding-top: 20vh;
+    font-size: 4em;
 }
-
 
 
 

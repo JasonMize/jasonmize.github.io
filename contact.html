@@ -3,35 +3,39 @@ layout: page
 title: Contact
 ---
 <div>
-	<p>I'd love to hear what you have to say about almost anything.  Please drop me a line!</p>	
+    <p>I'd love to hear what you have to say about almost anything.  Please drop me a line!</p> 
 </div>
 
-<form action="https://formspree.io/{{ site.email }}" method="post">
-	<div class="form-group">
-		<label for="name">First & Last Name:</label>
-		<input type="text" class="form-control" id="name" placeholder="Your First & Last Name" name="Name">
-	</div>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <form class='contact-form' action="https://formspree.io/{{ site.email }}" method="post">
+            <div class="form-group">
+                <label for="name">First & Last Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Your First & Last Name" name="Name">
+            </div>
 
-	<div class="form-group">
-		<label for="email">Email Address:</label>
-		<input type="text" class="form-control" id="email" placeholder="Your Email Address" name="_replyto">
-	</div>
-	
-	<div class="form-group">
-		<label for="feedback">Feedback:</label>
-		<textarea class="form-control" id="feedback" placeholder="Your Feedback" rows="5" name="Feedback"></textarea>
-	</div>
-	
-	<!-- hidden field that removes spam - if it is filled in then formspree doesn't send it -->
-	<div class="form-group gotcha">
-		<label for="gotcha">Gotcha:</label>
-		<input type="text" name="_gotcha" style="display:none" />	
-	</div>	
-	
-	<!-- where to go after submitting -->
-	<div class="form-group">
-		<input type="hidden" name="_next" value="//{{ site.baseurl }}/email_confirm.html" />
-	</div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" class="form-control" id="email" placeholder="Your Email Address" name="_replyto">
+            </div>
+            
+            <div class="form-group">
+                <label for="feedback">Feedback:</label>
+                <textarea class="form-control" id="feedback" placeholder="Your Feedback" rows="5" name="Feedback"></textarea>
+            </div>
+            
+            <!-- hidden field that removes spam - if it is filled in then formspree doesn't send it -->
+            <div class="form-group gotcha">
+                <label for="gotcha">Gotcha:</label>
+                <input type="text" name="_gotcha" style="display:none" />   
+            </div>  
+            
+            <!-- where to go after submitting -->
+            <div class="form-group">
+                <input type="hidden" name="_next" value="//{{ site.baseurl }}/email_confirm.html" />
+            </div>
 
-	<button type="submit" class="btn btn-info">Submit</button>
-</form>
+            <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+    </div>
+</div>
