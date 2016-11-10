@@ -106,6 +106,20 @@ footer li {
 .portfolio-image img{
     width: 198px;
 }
+.portfolio-image-whopainted {
+    /*background-color: #fff;*/
+    background: linear-gradient(210deg, #fff, #fff 50%, #b3cef9);
+}
+.portfolio-image-whopainted i {
+    padding-top: 20px;
+    margin: auto;
+    font-size: 140px;
+    color: #303097;
+    text-shadow: -10px 20px 20px #fff;
+}
+.animated-gif {
+    margin: auto;
+}
 .portfolio-image-plonker {
     background: linear-gradient(180deg, #f9fbff, #b3cef9 55%, #009); 
 }
@@ -122,7 +136,7 @@ footer li {
 }
 .portfolio-image-groceryrun {
     background: linear-gradient(180deg, #B43C3C, #562E2E);
-    background-color: #562E2E
+    background-color: #562E2E;
 }
 .portfolio-image-groceryrun i {
     padding-top: 20px;

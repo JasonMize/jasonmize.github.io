@@ -4,6 +4,46 @@ title: Portfolio
 ---
 
 <div class="row">
+
+    <!-- Who Painted -->
+    <div class="col-md-4 portfolio-container">
+        <div class="portfolio-box">
+
+            <h1 class='portfolio-title'>
+                <a href="http://www.whopainted.com/" target='_blank'>Who Painted</a>
+            </h1>
+
+            <h4 class="portfolio-blurb">
+                Art History Learning Platform 
+            </h4>
+            
+            <hr class='portfolio-hr'>
+            
+            <div class="portfolio-tools">
+                (Django / Python / Angular / Javascript)
+            </div>
+            
+            <div class="portfolio-image portfolio-image-whopainted">
+                <i class="fa fa-paint-brush" aria-hidden="true"></i>
+                <!-- <img src="{{ baseurl }}/images/whopainted_logo.png" alt="Who Painted"> -->
+            </div>                       
+
+            <div class="portfolio-box-controls">
+                <span class="portfolio-link">
+                    <a href="http://www.whopainted.com/" target='_blank'>Visit Site</a>
+                </span>
+                <span class="portfolio-github">
+                    <a href="https://github.com/JasonMize/who-painted" target='_blank'>View Code</a>
+                </span>
+                <span class="portfolio-preview">
+                    {% include whopainted-preview.html %} 
+               </span>
+            </div>
+        </div>        
+    </div>
+    <!-- end Who Painted -->
+
+
     
     <!-- Plonker -->
     <div class="col-md-4 portfolio-container">

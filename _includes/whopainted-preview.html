@@ -1,0 +1,74 @@
+<!-- Modal Call -->
+<a href="#" data-toggle='modal' data-target='#whopaintedPreview'>Preview</a>
+
+<!-- Modal -->
+<div class="modal fade" id="whopaintedPreview" tabindex="-1" role="dialog" aria-labelledby="whopaintedPreview">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                
+                <h4 class="modal-title" id="whopaintedPreview">Who Painted Screenshots</h4>
+            </div>
+      
+            <div class="modal-body">
+
+
+                <!-- Carousel -->
+                <div id="whopainted-screenshot" class="carousel slide carousel-content" data-interval='false' data-ride="carousel">
+
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#whopainted-screenshot" data-slide-to="0" class="active"></li>
+                        <li data-target="#whopainted-screenshot" data-slide-to="1"></li>
+                        <li data-target="#whopainted-screenshot" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item">
+                            <img src="{{ baseurl }}/images/whopainted_screenshot1.png" alt="#">
+                        </div>
+                        
+                        <div class="item">
+                            <img src="{{ baseurl }}/images/whopainted_screenshot2.png" alt="#">
+                        </div>
+
+                        <div class="item active">
+                            <img src="{{ baseurl }}/images/whopainted_screenshot3.gif" class='animated-gif' alt="#">
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#whopainted-screenshot" role="button" data-slide="prev">
+                        <i class="fa fa-arrow-circle-left carousel-arrow" aria-hidden="true"></i>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#whopainted-screenshot" role="button" data-slide="next">
+                        <i class="fa fa-arrow-circle-right carousel-arrow" aria-hidden="true"></i>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <!-- end Carousel -->
+
+ 
+            <!-- Modal resumes -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
