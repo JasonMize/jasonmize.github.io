@@ -11,7 +11,7 @@ title: Contact
         <form class='contact-form' action="https://formspree.io/{{ site.email }}" method="post">
             <div class="form-group">
                 <label for="name">First & Last Name:</label>
-                <input type="text" class="form-control" id="name" placeholder="Your First & Last Name" name="Name">
+                <input type="text" class="form-control" id="name" placeholder="Your First & Last Name" name="name">
             </div>
 
             <div class="form-group">
@@ -35,7 +35,7 @@ title: Contact
                 <input type="hidden" name="_next" value="//{{ site.baseurl }}/email_confirm.html" />
             </div>
 
-            <button type="submit" class="btn btn-info">Submit</button>
+            <button type="submit" value='Send' class="btn btn-info">Submit</button>
         </form>
     </div>
 </div>
