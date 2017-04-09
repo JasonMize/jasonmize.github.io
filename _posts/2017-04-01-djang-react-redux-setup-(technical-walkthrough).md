@@ -24,7 +24,7 @@ $ `line you should copy into terminal`
 
 Lines to insert into files will be shown as a code snippet. For example:
 
-**filename:**
+### **filename:**
 {% highlight html %}
 line you should copy into filename 
 {% endhighlight%}
@@ -79,7 +79,7 @@ $  `echo “r- base.txt” > requirements/testing.txt`
 $  `cp requirements.txt requirements/base.txt`
 Copy existing requirements into base.txt.
 
-**.gitignore:**   Update .gitignore so your Git repository only has what it should.
+### **.gitignore:**   Update .gitignore so your Git repository only has what it should.
 {% highlight html %}
 venv
 staticfiles
@@ -111,7 +111,7 @@ Rename settings.py to 'base.py'
 
 ## Step 3: Update Django Settings
 
-**.manage.py:** Update your naming to reflect the change to `config`.
+### **.manage.py:** Update your naming to reflect the change to `config`.
 
 Change
 {% highlight html %}
@@ -123,7 +123,7 @@ os.environ.setdefault(“DJANGO_SETTINGS_MODULE”, “config.settings.base”)
 {% endhighlight %}
 
 
-**.config/wgsi.py** This also updates naming to reflect the change to `config`.
+### **.config/wgsi.py** This also updates naming to reflect the change to `config`.
 
 Change
 {% highlight html %}
@@ -135,7 +135,7 @@ os.environ.setdefault(“DJANGO_SETTINGS_MODULE”, “config.settings.base”)
 {% endhighlight %}
 
 
-**.config/settings/base.py** These are mostly changes that reconfigure paths and naming schemes.
+### **.config/settings/base.py** These are mostly changes that reconfigure paths and naming schemes.
 
 Add to imports at top of file:
 {% highlight html %}
@@ -224,7 +224,7 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
 $  `touch .env` 
 This file is where you will save environment configuration parameters.
 
-**config/settings/production.py** These are settings for your production environment.
+### **config/settings/production.py** These are settings for your production environment.
 {% highlight html %}
 from .base import *
 
@@ -232,7 +232,7 @@ DEBUG = False
 {% endhighlight %}
 
 
-**config/settings/local.py** These are settings for your local environment.
+### **config/settings/local.py** These are settings for your local environment.
 {% highlight html %}
 from .base import *
 
@@ -241,7 +241,94 @@ DEBUG = True
 
 
 
-## Step 4
+## Step 4: Install NPM, Webpack, React, Redux
+    
+$  `npm init` 
+[NPM](https://www.npmjs.com/ "NPM") stands for Node Project Manager. It handles front-end project dependencies for React/Redux. Just follow the terminal prompts to set it up.
+
+$  `npm install --save-dev webpack webpack-bundle-tracker webpack-dev-server babel-core babel babel-loader babel-preset babel-preset-react babel-preset-stage react react-hot-loader react-dom react-router redux react-redux react-router-redux`
+These are the project dependencies for React/Redux. 
+
+
+## Step 5: Configure Webpack
+
+$  `mkdir -p apps/static/js`
+This is where our front end javascript files will live.
+
+$  `touch webpack.config.js`
+A file for our Webpack configuration.
+
+$  `touch apps/static/js/index.js`
+The root file that our site will point to. Our site "home".
+
+
+Edit webpack.config.js:
+var path = require('path')
+
+module.exports = {
+    context: __dirname,
+    entry: {
+        'index': './apps/static/js/index.js',
+    },
+    module: {
+        loaders: [{
+            test: /.js?$/,
+            loader: 'babel-loader',
+            exclude: /node_modules/,
+            query: {
+                presets: [
+                    'es2015', 'react', 'stage-0',
+                ],
+            }
+        }],
+    },
+    resolve: {
+        extensions: ['.js', '.jsx']
+    },
+    output: {
+        path: path.resolve('./apps/static/bundles/'),
+        publicPath: '/js',
+        filename: 'bundle.js',
+    },
+}
+
+
+
+
+Edit package.json:
+    Add to “scripts”: {  } 
+"build": "webpack --config webpack.config.js --progress --colors",  
+"build-production": "webpack --config webpack.prod.config.js --progress --colors",
+"watch": "node server.js"
+
+Create server.js
+    $  touch server.js
+
+Edit server.js
+var webpack = require('webpack')
+var WebpackDevServer = require('webpack-dev-server')
+var config = require('./webpack.config')
+
+new WebpackDevServer(webpack(config), {
+    publicPath: config.output.publicPath,
+    hot: true,
+    inline: true,
+    historyApiFallback: true
+}).listen(3000, '0.0.0.0', function (err, result) {
+    if (err) {
+        console.log(err)
+    }
+
+    console.log('Listening at 0.0.0.0:3000')
+})
+
+$  mkdir apps/static/bundles
+$  touch apps/static/bundles/bundle.js
+
+
+Start your terminal running 
+    $  node server.js
+    $  npm run watch
 
 
 
