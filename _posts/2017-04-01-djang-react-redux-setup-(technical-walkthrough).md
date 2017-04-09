@@ -93,7 +93,7 @@ node_modules
 
 ## Step 2: Change Project Settings Into Package
 
-Rename <project-name> folder to 'config'
+Rename `<project-name>` folder to `config`
 
 $  `mkdir config/settings`
 
@@ -109,9 +109,139 @@ Rename settings.py to 'base.py'
 
 
 
+## Step 3: Update Django Settings
+
+**.manage.py:** Update your naming to reflect the change to `config`.
+
+Change
+{% highlight html %}
+os.environ.setdefault(“DJANGO_SETTINGS_MODULE”, “<project-name>.settings”)
+{% endhighlight %}
+To
+{% highlight html %}
+os.environ.setdefault(“DJANGO_SETTINGS_MODULE”, “config.settings.base”)
+{% endhighlight %}
+
+
+**.config/wgsi.py** This also updates naming to reflect the change to `config`.
+
+Change
+{% highlight html %}
+os.environ.setdefault(“DJANGO_SETTINGS_MODULE”, “<project-name>.settings”)
+{% endhighlight %}
+To
+{% highlight html %}
+os.environ.setdefault(“DJANGO_SETTINGS_MODULE”, “config.settings.base”)
+{% endhighlight %}
+
+
+**.config/settings/base.py** These are mostly changes that reconfigure paths and naming schemes.
+
+Add to imports at top of file:
+{% highlight html %}
+from unipath import Path
+{% endhighlight %}
+
+Change
+{% highlight html %}
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+{% endhighlight %}
+To
+{% highlight html %}
+BASE_DIR = Path(__file__).ancestor(3)
+{% endhighlight %}
+
+Add line below `BASE_DIR`:
+{% highlight html %}
+DIST_DIR = BASE_DIR.ancestor(1).child("dist")
+APPS_DIR = BASE_DIR.child(“apps”)
+TEMPLATE_DIR = BASE_DIR.child(“templates”)
+STATIC_FILE_DIR = BASE_DIR.child(“static”)
+{% endhighlight %}
+
+Change
+{% highlight html %}
+ROOT_URLCONF = ‘<project-name>.urls’
+{% endhighlight %}
+To
+{% highlight html %}
+ROOT_URLCONF = ‘config.urls’
+{% endhighlight %}
+
+Change
+{% highlight html %}
+WSGI_APPLICATION = ‘<project-name>.wsgi.application’
+{% endhighlight %}
+To
+{% highlight html %}
+WSGI_APPLICATION = ‘config.wsgi.application’
+{% endhighlight %}
+
+Change
+{% highlight html %}
+TEMPLATES = [
+    {
+        ‘DIRS’: [],
+    },
+]
+{% endhighlight %}
+To
+{% highlight html %}
+TEMPLATES = [
+    {
+        ‘DIRS’: [TEMPLATE_DIR],
+    },
+]
+{% endhighlight %}
+
+Beneath `TEMPLATES` add:
+{% highlight html %}
+STATICFILES_DIRS = (
+    STATIC_FILE_DIR,
+    DIST_DIR,
+) 
+{% endhighlight %}
+
+Beneath `STATIC_URL` add:
+{% highlight html %}
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'bundles/',
+        'STATS_FILE': os.path.join(BASE_DIR, '../webpack-stats.json')
+    }
+}
+{% endhighlight %}
+
+Rename `INSTALLED_APPS` to `DJANGO_APPS`.
+
+Below `DJANGO_APPS` add:
+{% highlight html %}
+THIRD_PARTY_APPS = [ 'webpack_loader', ]
+PROJECT_APPS = []
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
+{% endhighlight %}
+
+$  `touch .env` 
+This file is where you will save environment configuration parameters.
+
+**config/settings/production.py** These are settings for your production environment.
+{% highlight html %}
+from .base import *
+
+DEBUG = False
+{% endhighlight %}
+
+
+**config/settings/local.py** These are settings for your local environment.
+{% highlight html %}
+from .base import *
+
+DEBUG = True
+{% endhighlight %}
 
 
 
+## Step 4
 
 
 
