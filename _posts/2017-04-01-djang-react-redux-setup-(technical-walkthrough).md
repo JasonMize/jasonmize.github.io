@@ -355,6 +355,8 @@ Start webpack watching our bundle file.
 This is the back-end Django file that the site lands on before forwarding us to our front-end index.js.
 
 {% highlight html %}
+<!-- {% load staticfiles %}
+
 {% block page_content %}
     <div id="root">
         LOADING
@@ -363,7 +365,7 @@ This is the back-end Django file that the site lands on before forwarding us to 
 
 {% block body_scripts %}
     <script src="{% static 'js/index.js'%}"></script>
-{% endblock body_scripts %}
+{% endblock body_scripts %} -->
 {% endhighlight %}
 
 
