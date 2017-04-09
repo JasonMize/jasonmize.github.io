@@ -353,16 +353,5 @@ Start webpack watching our bundle file.
 
 #### **`<project-name>`/templates/`<project-name>`/index.html**
 This is the back-end Django file that the site lands on before forwarding us to our front-end index.js.
-
 {% highlight html %}
-{% end highlight %}
-
-
-
-
-
-
-
-
-
-
+{% endhighlight %}
