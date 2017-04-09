@@ -355,11 +355,9 @@ Start webpack watching our bundle file.
 This is the back-end Django file that the site lands on before forwarding us to our front-end index.js.
 
 {% highlight html %}
-{% load staticfiles %}
-
 {% block page_content %}
     <div id="root">
-        LOADING REACT DEMO
+        LOADING
     </div>
 {% endblock page_content %}
 
