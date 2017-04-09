@@ -21,7 +21,3 @@ line you should copy into file
 {% endhighlight%}
 
 Anytime you see "project_name", change it to the name of your project. 
-
-
-
-
