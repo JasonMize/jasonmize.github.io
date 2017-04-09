@@ -43,40 +43,23 @@ I was unsuccessful. This walkthrough succeeds in creating an environment that bu
 ## Step 1: Install Packages
 
 1. [Django-Webpack-Loader](https://pypi.python.org/pypi/django-webpack-loader/ "django-webpack-loader"): The magic of React/Redux is that they allow a website to be dynamically refreshed without loading a new url. This is done by creating a static bundle of information and then updating it as information changes. Webpack watches that bundle and updates Django when it changes. 
-
-$  `pip install django-webpack-loader`
-
-2. [Dj-Database-Url](https://pypi.python.org/pypi/dj-database-url/ "dj-database-url"): My impression is that this package is what allows us to pass information in variables embedded inside urls. 
-
-$  `pip install dj-database-url`
-
-3. [Gunicorn](http://docs.gunicorn.org/en/stable/ "Gunicorn"): My impression is that Gunicorn acts like a lightweight version of Apache for local development. An http server. 
-
-$  `pip install gunicorn`
-
-4. [Python-Decouple](https://pypi.python.org/pypi/python-decouple/ "Python-Decouple"): This package lets you set environment variables in a .env file so your configuration parameters are easily accessible. 
-
-$  `pip install python-decouple`
-
-5. [Requests](https://pypi.python.org/pypi/requests/ "Requests"): No clue what this does. Anybody? 
-
-$  `pip install requests`
-
-6. [Whitenoise](http://whitenoise.evans.io/en/stable/ "Whitenoise"): This package lets you serve static files (images, etc.) and store them inside your own file structure instead of relying on Amazon S3 buckets and similar options.
-
-$  `pip install whitenoise`
-
-7. [Unipath](https://pypi.python.org/pypi/Unipath): No idea. Sorry.
-
-$  `pip install unipath`
-
-8. Save your packages to a 'requirements.txt' file so that other users know what you have installed and can quickly replicate your build.
-
-$  `pip freeze > requirements.txt`
-
-9. Update .gitignore so your Git repository only has what it should.
-
-**.gitignore**
+  * $  `pip install django-webpack-loader`
+1. [Dj-Database-Url](https://pypi.python.org/pypi/dj-database-url/ "dj-database-url"): My impression is that this package is what allows us to pass information in variables embedded inside urls. 
+  * $  `pip install dj-database-url`
+1. [Gunicorn](http://docs.gunicorn.org/en/stable/ "Gunicorn"): My impression is that Gunicorn acts like a lightweight version of Apache for local development. An http server. 
+  * $  `pip install gunicorn`
+1. [Python-Decouple](https://pypi.python.org/pypi/python-decouple/ "Python-Decouple"): This package lets you set environment variables in a .env file so your configuration parameters are easily accessible. 
+  * $  `pip install python-decouple`
+1. [Requests](https://pypi.python.org/pypi/requests/ "Requests"): No clue what this does. Anybody? 
+  * $  `pip install requests`
+1. [Whitenoise](http://whitenoise.evans.io/en/stable/ "Whitenoise"): This package lets you serve static files (images, etc.) and store them inside your own file structure instead of relying on Amazon S3 buckets and similar options.
+  * $  `pip install whitenoise`
+1. [Unipath](https://pypi.python.org/pypi/Unipath): No idea. Sorry.
+  * $  `pip install unipath`
+1. Save your packages to a 'requirements.txt' file so that other users know what you have installed and can quickly replicate your build.
+  * $  `pip freeze > requirements.txt`
+1. Update .gitignore so your Git repository only has what it should.
+*  **.gitignore**
 {% highlight html %}
 venv
 staticfiles
