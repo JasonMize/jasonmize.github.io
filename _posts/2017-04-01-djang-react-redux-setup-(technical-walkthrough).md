@@ -42,39 +42,39 @@ I was unsuccessful. This walkthrough succeeds in creating an environment that bu
 
 ## Step 1: Install Packages
 
-[Django-Webpack-Loader](https://pypi.python.org/pypi/django-webpack-loader/ "django-webpack-loader"): The magic of React/Redux is that they allow a website to be dynamically refreshed without loading a new url. This is done by creating a static bundle of information and then updating it as information changes. Webpack watches that bundle and updates Django when it changes. 
+1. [Django-Webpack-Loader](https://pypi.python.org/pypi/django-webpack-loader/ "django-webpack-loader"): The magic of React/Redux is that they allow a website to be dynamically refreshed without loading a new url. This is done by creating a static bundle of information and then updating it as information changes. Webpack watches that bundle and updates Django when it changes. 
 
 $  `pip install django-webpack-loader`
 
-[Dj-Database-Url](https://pypi.python.org/pypi/dj-database-url/ "dj-database-url"): My impression is that this package is what allows us to pass information in variables embedded inside urls. 
+2. [Dj-Database-Url](https://pypi.python.org/pypi/dj-database-url/ "dj-database-url"): My impression is that this package is what allows us to pass information in variables embedded inside urls. 
 
 $  `pip install dj-database-url`
 
-[Gunicorn](http://docs.gunicorn.org/en/stable/ "Gunicorn"): My impression is that Gunicorn acts like a lightweight version of Apache for local development. An http server. 
+3. [Gunicorn](http://docs.gunicorn.org/en/stable/ "Gunicorn"): My impression is that Gunicorn acts like a lightweight version of Apache for local development. An http server. 
 
 $  `pip install gunicorn`
 
-[Python-Decouple](https://pypi.python.org/pypi/python-decouple/ "Python-Decouple"): This package lets you set environment variables in a .env file so your configuration parameters are easily accessible. 
+4. [Python-Decouple](https://pypi.python.org/pypi/python-decouple/ "Python-Decouple"): This package lets you set environment variables in a .env file so your configuration parameters are easily accessible. 
 
 $  `pip install python-decouple`
 
-[Requests](https://pypi.python.org/pypi/requests/ "Requests"): No clue what this does. Anybody? 
+5. [Requests](https://pypi.python.org/pypi/requests/ "Requests"): No clue what this does. Anybody? 
 
 $  `pip install requests`
 
-[Whitenoise](http://whitenoise.evans.io/en/stable/ "Whitenoise"): This package lets you serve static files (images, etc.) and store them inside your own file structure instead of relying on Amazon S3 buckets and similar options.
+6. [Whitenoise](http://whitenoise.evans.io/en/stable/ "Whitenoise"): This package lets you serve static files (images, etc.) and store them inside your own file structure instead of relying on Amazon S3 buckets and similar options.
 
 $  `pip install whitenoise`
 
-[Unipath](https://pypi.python.org/pypi/Unipath): No idea. Sorry.
+7. [Unipath](https://pypi.python.org/pypi/Unipath): No idea. Sorry.
 
 $  `pip install unipath`
 
-Save your packages to a 'requirements.txt' file so that other users know what you have installed and can quickly replicate your build.
+8. Save your packages to a 'requirements.txt' file so that other users know what you have installed and can quickly replicate your build.
 
 $  `pip freeze > requirements.txt`
 
-Update .gitignore so your Git repository only has what it should.
+9. Update .gitignore so your Git repository only has what it should.
 
 **.gitignore**
 {% highlight html %}
