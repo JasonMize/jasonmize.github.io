@@ -349,6 +349,50 @@ Start webpack watching our bundle file.
 
 
 
+## Step 6: Django Setup
+
+#### **`<project-name>`/templates/`<project-name>`/index.html**
+This is the back-end Django file that the site lands on before forwarding us to our front-end index.js.
+
+{% highlight html %}
+{% load staticfiles %}
+
+{% block page_content %}
+    <div id="root">
+        LOADING REACT DEMO
+    </div>
+{% endblock page_content %}
+
+{% block body_scripts %}
+    <script src="{% static 'js/index.js'%}"></script>
+{% endblock body_scripts %}
+{% endhighlight %}
+
+
+#### **`<project-name>`/templates/views.py**
+
+{% highlight html %}
+from django.views.generic import TemplateView
+
+class React(TemplateView):
+    template_name = '<project-name>/index.html'
+{% endhighlight %}
+
+
+#### **`<project-name>`/templates/urls.py**
+
+Change `urlpatterns` to
+{% highlight html %}
+urlpatterns = [
+    url(r'^react', views.React.as_view(), name='react'),
+]
+{% endhighlight %}
+
+
+
+
+
+
 
 
 
