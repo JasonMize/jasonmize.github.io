@@ -40,6 +40,7 @@ I was unsuccessful. This walkthrough succeeds in creating an environment that bu
 # Start: 
 
 
+
 ## Step 1: Install Packages
 
 $  `pip install django-webpack-loader`
@@ -66,6 +67,18 @@ $  `pip install unipath`
 $  `pip freeze > requirements.txt`
 Save your packages to a 'requirements.txt' file so that other users know what you have installed and can quickly replicate your build.
 
+$  `mkdir requirements` 
+Create folder structure to manage requirements for different environments.
+
+$  `echo “r- base.txt” > requirements/production.txt`
+
+$  `echo “r- base.txt” > requirements/local.txt`
+
+$  `echo “r- base.txt” > requirements/testing.txt`
+
+$  `cp requirements.txt requirements/base.txt`
+Copy existing requirements into base.txt.
+
 **.gitignore:**   Update .gitignore so your Git repository only has what it should.
 {% highlight html %}
 venv
@@ -77,17 +90,29 @@ node_modules
 {% endhighlight%}
 
 
-#### Create folder structure to manage requirements for different environments:
 
-$  `mkdir requirements`
+## Step 2: Change Project Settings Into Package
 
-$  `echo “r- base.txt” > requirements/production.txt`
+Rename <project-name> folder to 'config'
 
-$  `echo “r- base.txt” > requirements/local.txt`
+$  `mkdir config/settings`
 
-$  `echo “r- base.txt” > requirements/testing.txt`
+$  `touch config/settings/__init__.py`
 
-$  `cp requirements.txt requirements/base.txt`
+$  `touch config/settings/local.py`
+
+$  `touch config/settings/production.py`
+
+Move settings.py to config folder
+
+Rename settings.py to 'base.py'
+
+
+
+
+
+
+
 
 
 
