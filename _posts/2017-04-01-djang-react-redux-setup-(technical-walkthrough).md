@@ -66,7 +66,7 @@ $  `pip install unipath`
 $  `pip freeze > requirements.txt`
   Save your packages to a 'requirements.txt' file so that other users know what you have installed and can quickly replicate your build.
 
-**.gitignore**
+**.gitignore**   Update .gitignore so your Git repository only has what it should.
 {% highlight html %}
 venv
 staticfiles
@@ -75,7 +75,6 @@ env
 node_modules
 <project-name>/static/build
 {% endhighlight%}
-  Update .gitignore so your Git repository only has what it should.
 
 
 
