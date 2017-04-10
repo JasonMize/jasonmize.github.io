@@ -338,6 +338,7 @@ new WebpackDevServer(webpack(config), {
 {% endhighlight %}
 
 $  `mkdir apps/static/bundles`
+
 $  `touch apps/static/bundles/bundle.js`
 This file will hold the information about our current state.
 
@@ -385,8 +386,115 @@ class React(TemplateView):
 Change `urlpatterns` to
 {% highlight django %}{% raw %}
 urlpatterns = [
-    url(r'^react', views.React.as_view(), name='react'),
+    url(r'^index', views.React.as_view(), name='index'),
 ]
+{% endraw %}{% endhighlight %}
+
+
+
+## Step 7: React / Redux Setup
+
+#### **`<project-name>`/apps/static/js/index.js**
+This is the front-end landing page.
+
+{% highlight django %}{% raw %}
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { Router, Route, hashHistory, Redirect } from 'react-router';
+import { syncHistoryWithStore } from 'react-router-redux';
+
+import indexStore from './stores/indexStore';
+import ReactIndex from './components/ReactIndex';
+
+global.reduxStore = indexStore;
+
+const history = syncHistoryWithStore(hashHistory, indexStore);
+ReactDOM.render(
+    <Provider store={indexStore}>
+        <Router history={history}>
+            <Redirect from ="/" to="reactIndex/" />
+            <Route path="reactIndex/" component={ReactIndex} /> 
+        </Router>,
+    </Provider>,
+    document.getElementById('root'),
+);
+{% endraw %}{% endhighlight %}
+
+
+### Create the file structure for react/redux files.
+
+$ `mkdir apps/static/js/components`
+
+$ `mkdir apps/static/js/constants`
+
+$ `mkdir apps/static/js/actions`
+
+$ `mkdir apps/static/js/middlewares`
+
+$ `mkdir apps/static/js/reducers`
+
+$ `mkdir apps/static/js/stores`
+
+$ `touch apps/static/js/components/ReactIndex.js`
+
+$ `touch apps/static/js/stores/indexStore.js`
+
+$ `touch apps/static/js/reducers/indexReducer.js`
+
+
+#### **apps/static/js/components/ReactIndex.js**
+This is a 'Hello World' React/Redux component. 
+
+{% highlight django %}{% raw %}
+import React from 'react';
+
+export class ReactIndex extends React.Component {
+
+    render() {
+        return (
+            <div>
+                <h1>This is a working react component.</h1>
+            </div>
+        );
+    }
+}
+
+export default ReactIndex;
+{% endraw %}{% endhighlight %}
+
+
+#### **apps/static/js/reducers/indexReducer.js**
+A basic Reducer.
+
+{% highlight django %}{% raw %}
+import { combineReducers } from 'redux';
+import { routerReducer } from 'react-router-redux';
+
+const indexReducer = combineReducers({
+    routing: routerReducer,
+});
+
+export default indexReducer;
+{% endraw %}{% endhighlight %}
+
+
+#### **apps/static/js/stores/indexStore.js**
+A basic store.
+
+{% highlight django %}{% raw %}
+import { compose, applyMiddleware, createStore } from 'redux';
+
+import indexReducer from '../reducers/indexReducer';
+
+const enhancer = compose(
+    applyMiddleware(
+    ),
+);
+
+const store = createStore(indexReducer, {}, enhancer);
+
+export default store;
 {% endraw %}{% endhighlight %}
 
 
