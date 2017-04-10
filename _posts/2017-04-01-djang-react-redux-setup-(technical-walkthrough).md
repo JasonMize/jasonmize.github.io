@@ -354,7 +354,7 @@ Start webpack watching our bundle file.
 #### **`<project-name>`/templates/`<project-name>`/index.html**
 This is the back-end Django file that the site lands on before forwarding us to our front-end index.js.
 
-{% highlight django %}
+{% highlight django %}{% raw %}
 
 {% load staticfiles %}
 
@@ -367,27 +367,27 @@ This is the back-end Django file that the site lands on before forwarding us to 
 {% block body_scripts %}
     <script src="{% static 'js/index.js'%}"></script>
 {% endblock body_scripts %}
-{% endhighlight %}
+{% endraw %}{% endhighlight %}
 
 
 #### **`<project-name>`/templates/views.py**
 
-{% highlight django %}
+{% highlight django %}{% raw %}
 from django.views.generic import TemplateView
 
 class React(TemplateView):
     template_name = '<project-name>/index.html'
-{% endhighlight %}
+{% endraw %}{% endhighlight %}
 
 
 #### **`<project-name>`/templates/urls.py**
 
 Change `urlpatterns` to
-{% highlight django %}
+{% highlight django %}{% raw %}
 urlpatterns = [
     url(r'^react', views.React.as_view(), name='react'),
 ]
-{% endhighlight %}
+{% endraw %}{% endhighlight %}
 
 
 
