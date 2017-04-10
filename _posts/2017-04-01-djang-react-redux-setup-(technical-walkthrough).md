@@ -422,7 +422,7 @@ ReactDOM.render(
 {% endraw %}{% endhighlight %}
 
 
-### Create the file structure for react/redux files.
+### Create the file structure for the React/Redux files.
 
 $ `mkdir apps/static/js/components`
 
