@@ -366,7 +366,7 @@ This is the back-end Django file that the site lands on before forwarding us to 
 {% endblock page_content %}
 
 {% block body_scripts %}
-    <script src="{% static 'js/index.js'%}"></script>
+    <script type="text/jsx" src="{% static 'js/index.js'%}"></script>
 {% endblock body_scripts %}
 {% endraw %}{% endhighlight %}
 
