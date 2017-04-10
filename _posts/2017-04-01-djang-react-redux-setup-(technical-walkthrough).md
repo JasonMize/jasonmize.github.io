@@ -27,7 +27,7 @@ Lines to insert into files will be shown as a code snippet. For example:
 #### **filename:**
 {% highlight html %}
 line you should copy into filename 
-{% endhighlight%}
+{% endhighlight %}
 
 Anytime you see "project_name", change it to the name of your project. 
 
@@ -88,7 +88,7 @@ staticfiles
 env
 node_modules
 <project-name>/static/build
-{% endhighlight%}
+{% endhighlight %}
 
 
 
@@ -307,7 +307,7 @@ module.exports = {
 
 Add to `scripts` dictionary 
 {% highlight html %}
-"build": "webpack --config webpack.config.js --progress --colors",  
+"build": "webpack --config webpack.config.js --progress --colors",
 "build-production": "webpack --config webpack.prod.config.js --progress --colors",
 "watch": "node server.js"
 {% endhighlight %}
@@ -353,5 +353,48 @@ Start webpack watching our bundle file.
 
 #### **`<project-name>`/templates/`<project-name>`/index.html**
 This is the back-end Django file that the site lands on before forwarding us to our front-end index.js.
+
 {% highlight html %}
+
+{% load staticfiles %}
+
+{% block page_content %}
+    <div id="root">
+        LOADING
+    </div>
+{% endblock page_content %}
+
+{% block body_scripts %}
+    <script src="{% static 'js/index.js'%}"></script>
+{% endblock body_scripts %}
 {% endhighlight %}
+
+
+#### **`<project-name>`/templates/views.py**
+
+{% highlight html %}
+from django.views.generic import TemplateView
+
+class React(TemplateView):
+    template_name = '<project-name>/index.html'
+{% endhighlight %}
+
+
+#### **`<project-name>`/templates/urls.py**
+
+Change `urlpatterns` to
+{% highlight html %}
+urlpatterns = [
+    url(r'^react', views.React.as_view(), name='react'),
+]
+{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
