@@ -47,7 +47,7 @@ $  `pip install django-webpack-loader`
 [Django-Webpack-Loader](https://pypi.python.org/pypi/django-webpack-loader/ "django-webpack-loader"): The magic of React/Redux is that they allow a website to be dynamically refreshed without loading a new url. This is done by creating a static bundle of information and then updating it as information changes. Webpack watches that bundle and updates Django when it changes. 
 
 $  `pip install dj-database-url`
-[Dj-Database-Url](https://pypi.python.org/pypi/dj-database-url/ "dj-database-url"): My impression is that this package is what allows us to pass information in variables embedded inside urls. 
+[Dj-Database-Url](https://pypi.python.org/pypi/dj-database-url/ "dj-database-url"): This simplifies database configuration, making it a url instead of separate configuration parameters.
 
 $  `pip install gunicorn`
 [Gunicorn](http://docs.gunicorn.org/en/stable/ "Gunicorn"): My impression is that Gunicorn acts like a lightweight version of Apache for local development. An http server. 
@@ -56,13 +56,13 @@ $  `pip install python-decouple`
 [Python-Decouple](https://pypi.python.org/pypi/python-decouple/ "Python-Decouple"): This package lets you set environment variables in a .env file so your configuration parameters are easily accessible. 
 
 $  `pip install requests`
-[Requests](https://pypi.python.org/pypi/requests/ "Requests"): No clue what this does. Anybody? 
+[Requests](https://pypi.python.org/pypi/requests/ "Requests"): This is a library for making http requests from the back-end Django side instead of from your browser. This lets Django call other web service to get data.
 
 $  `pip install whitenoise`
 [Whitenoise](http://whitenoise.evans.io/en/stable/ "Whitenoise"): This package lets you serve static files (images, etc.) and store them inside your own file structure instead of relying on Amazon S3 buckets and similar options.
 
 $  `pip install unipath`
-[Unipath](https://pypi.python.org/pypi/Unipath): No idea. Sorry.
+[Unipath](https://pypi.python.org/pypi/Unipath): This is a wrapper library that gives a cleaner interface to the filesystem. It simplifies movement through directories, opening files, etc.
 
 $  `pip freeze > requirements.txt`
 Save your packages to a 'requirements.txt' file so that other users know what you have installed and can quickly replicate your build.
