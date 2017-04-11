@@ -16,7 +16,7 @@ This is a learning project for me. I'll try to identify parts that I am less sur
 
 ## Goals: 
 
-This post is a technical walkthrough for setting up Django + React + Redux on a Macbook Pro.  It assumes you have already set up a basic Django + Django Rest Framework 'Hello World'.  We'll be starting from there. 
+This post is a technical walkthrough for setting up Django + React + Redux on a Macbook Pro.  It assumes you have already set up a basic Django + Django Rest Framework 'Hello World'.  We'll be starting from there. You're in charge of your own GitHub commits. 
 
 Any line preceeded by a "$" is intended as a terminal command. For example:
 
