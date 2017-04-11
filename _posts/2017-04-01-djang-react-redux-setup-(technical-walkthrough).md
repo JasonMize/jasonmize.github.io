@@ -79,6 +79,14 @@ $  `echo “r- base.txt” > requirements/testing.txt`
 $  `cp requirements.txt requirements/base.txt`
 Copy existing requirements into base.txt.
 
+
+#### **requirements.txt**
+Redirect requirements.txt to the full list for local and production environments. 
+{% highlight html %}
+-r requirements/production.txt
+{% endhighlight %}
+
+
 #### **.gitignore:**
 Update .gitignore so your Git repository only has what it should.
 {% highlight html %}
@@ -88,12 +96,6 @@ staticfiles
 env
 node_modules
 <project-name>/static/build
-{% endhighlight %}
-
-#### **requirements.txt**
-Redirect requirements.txt to the full list for local and production environments. 
-{% highlight html %}
--r requirements/production.txt
 {% endhighlight %}
 
 
