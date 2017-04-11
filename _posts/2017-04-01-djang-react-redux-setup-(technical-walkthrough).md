@@ -7,14 +7,14 @@ title: Django + React + Redux Setup (technical walkthrough)
 
 [Django](https://www.djangoproject.com/ "Django") is a web framework. It can be complicated to learn but is both powerful and versatile as a projects back end. A good choice for complex apps. It is written in Python.
 
-[React](https://facebook.github.io/react/ "React") is a library for front end user interfaces. It is written in Javascript. 
+[React](https://facebook.github.io/react/ "React") is a library for front end user interfaces. It allows components on a webpage to be updated without sending the user to a different url. It is written in Javascript. 
 
 [Redux](http://redux.js.org/ "Redux") is a framework that tracks object state. It is used in conjunction with user interfaces like React or Angular. It is written in Javascript.
 
 This is a learning project for me. I'll try to identify parts that I am less sure of. Please let me know anything I can correct. 
 
 
-## Directions: 
+## Goals: 
 
 This post is a technical walkthrough for setting up Django + React + Redux on a Macbook Pro.  It assumes you have already set up a basic Django + Django Rest Framework 'Hello World'.  We'll be starting from there. 
 
@@ -50,7 +50,7 @@ $  `pip install dj-database-url`
 [Dj-Database-Url](https://pypi.python.org/pypi/dj-database-url/ "dj-database-url"): This simplifies database configuration, making it a url instead of separate configuration parameters.
 
 $  `pip install gunicorn`
-[Gunicorn](http://docs.gunicorn.org/en/stable/ "Gunicorn"): My impression is that Gunicorn acts like a lightweight version of Apache for local development. An http server. 
+[Gunicorn](http://docs.gunicorn.org/en/stable/ "Gunicorn"): Gunicorn is a wsgi (web server gateway interface) for Django. It runs python processes for the Django apps. Basically an app server behind the web server.
 
 $  `pip install python-decouple`
 [Python-Decouple](https://pypi.python.org/pypi/python-decouple/ "Python-Decouple"): This package lets you set environment variables in a .env file so your configuration parameters are easily accessible. 
@@ -88,6 +88,12 @@ staticfiles
 env
 node_modules
 <project-name>/static/build
+{% endhighlight %}
+
+#### **requirements.txt**
+Redirect requirements.txt to the full list for local and production environments. 
+{% highlight html %}
+-r requirements/production.txt
 {% endhighlight %}
 
 
