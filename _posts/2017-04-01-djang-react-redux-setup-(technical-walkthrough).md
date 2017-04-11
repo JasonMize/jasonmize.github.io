@@ -34,7 +34,7 @@ Anytime you see "project_name", change it to the name of your project.
 
 ## Confession:
 
-I was unsuccessful. This walkthrough succeeds in creating an environment that bundles your information, watches it with webpack, and seems to be working correctly. So the hard part is done.  However, there is an error in the url paths.  The user gets to the Django back-end index.html but fails to be forwarded to the React front-end index.js. As soon as I fix this I will update this tutorial. If you figure it out first, let me know.  :)
+I was unsuccessful. This walkthrough succeeds in creating an environment that bundles your information, watches it with webpack, and seems to be working correctly. However, there is an error somewhere. The user gets to the Django back-end index.html but fails to be forwarded to the React front-end index.js. As soon as I fix this I will update this tutorial. If you figure it out first, let me know.  :)
 
 
 # Start: 
