@@ -17,6 +17,11 @@ My band, The Many-Splendored Things:
 Facebook: www.facebook.com/TheManySplendoredThings
 
 
+My webcomic, Critterlopers:
+
+www.critterlopers.com
+
+
 My online space strategy game:
 
 www.talesfromthestrangeuniverse.com
