@@ -133,6 +133,6 @@ Edit App.scss and delete everything in the file.  These were generic styles adde
 
 
 
-
+### **[Continued in Part 4]({% post_url 2018-03-04-django-react-part-4 %})**
 
 
