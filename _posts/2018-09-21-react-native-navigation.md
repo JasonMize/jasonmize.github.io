@@ -82,7 +82,7 @@ Inside each component that is a link in the menu we need to add code to handle t
 {% endhighlight %}
 
 
-# Step Four: Next / Back Components
+## Step Four: Next / Back Components
 We need 2 components to handle our 'Back' and 'Next' links in the navigation menu.  You can pass variables through these links to manage state for your app.  We'll talk more about that in the next step.
 
 #### **HeaderBack.js and HeaderNext.js:**
@@ -107,8 +107,8 @@ We need 2 components to handle our 'Back' and 'Next' links in the navigation men
 {% endhighlight %}
 
 
-# Step Five: Linking To Pages
-## Sending Parameters
+## Step Five: Linking To Pages
+### Sending Parameters
 This is how to link to another component and also pass parameters to that component.  
 {% highlight html %}
   <View>
@@ -124,7 +124,7 @@ This is how to link to another component and also pass parameters to that compon
   </View>
 {% endhighlight %}
 
-## Receiving Parameters
+### Receiving Parameters
 In the receiving component you access the parameters passed to you like so... 
 {% highlight html %}
   componentDidMount() {
