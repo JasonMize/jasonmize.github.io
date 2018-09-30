@@ -140,4 +140,16 @@ Put it all together and it looks like this:
 {% endhighlight %}
 
 
+## IOS vs. Android
+In local development your IOS simulator will only work if you make your url point to localhost.
+{% highlight html %}
+  http://localhost:5000
+{% endhighlight %}
 
+In local development your Android simulator will only work if you give your url an explicit address.
+{% highlight html %}
+  http://10.0.2.2:5000
+{% endhighlight %}
+
+
+# FIN
