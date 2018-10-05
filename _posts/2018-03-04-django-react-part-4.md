@@ -28,13 +28,14 @@ registerServiceWorker();
 {% endhighlight %}
 
 
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 #### **src/index.js**
 #### ADD:
 {% highlight html %}
+
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 ReactDOM.render(
   <Router>
